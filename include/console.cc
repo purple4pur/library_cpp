@@ -23,20 +23,20 @@ void Console::SetCsrPos(const int x, const int y) {
   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
 
-int Console::GetKey(void) {
-  int key = getch();
-  if (key == 0) {
+char Console::GetKey(void) {
+  char key = getch();
+  if (key == -32) {
     key = getch();
   }
   return key;
 }
 
-int Console::CatchKey(void) {
+char Console::CatchKey(void) {
   if (!kbhit()) {
     return 0;
   }
-  int key = getch();
-  if (key == 0) {
+  char key = getch();
+  if (key == -32) {
     key = getch();
   }
   return key;
