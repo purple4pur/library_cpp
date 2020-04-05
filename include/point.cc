@@ -5,14 +5,16 @@
 
 #include "console.h"
 
-void Point::Info(void) {
-  std::cout << "(" << this->X_ << ", " << this->Y_ << ")" << std::endl;
-}
-
 int Point::GetX(void) { return this->X_; };
 
 int Point::GetY(void) { return this->Y_; };
 
+// 输出坐标
+void Point::Info(void) {
+  std::cout << "(" << this->X_ << ", " << this->Y_ << ")" << std::endl;
+}
+
+// 在坐标位置打印
 void Point::Dot(const std::string& s) {
   Console::SetCsrPos(this->GetX(), this->GetY());
   std::cout << s;

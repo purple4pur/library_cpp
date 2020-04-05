@@ -9,8 +9,8 @@ class Point {
   Point(int x = 0, int y = 0) : X_(x), Y_(y) {}
   int GetX(void);
   int GetY(void);
-  void Info(void);
-  void Dot(const std::string& s);
+  void Info(void);                 // 输出坐标
+  void Dot(const std::string& s);  // 在坐标位置打印
 
   bool operator==(const Point& p);
   Point operator+(const Point& p);
