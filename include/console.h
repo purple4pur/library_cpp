@@ -18,8 +18,9 @@ void Clear(void);                                     // 清屏
 void SetTitle(std::string title);                     // 设置窗口标题
 void SetWindowSize(const int cols, const int lines);  // 设置窗口大小
 void SetCsrPos(const int x, const int y);             // 设置光标位置
-char GetKey(void);    // 获取按键值（阻塞）
-char CatchKey(void);  // 获取按键值（非阻塞）
+char GetKey(void);        // 获取按键值（阻塞）
+char CatchKey(void);      // 获取按键值（非阻塞）
+void Wait(const int ms);  // 等待一段时间
 
 }  // namespace Console
 

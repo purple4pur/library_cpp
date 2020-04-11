@@ -55,3 +55,6 @@ char Console::CatchKey(void) {
 
   return Console::GetKey();
 }
+
+// 等待一段时间
+void Console::Wait(const int ms) { Sleep(ms); }
